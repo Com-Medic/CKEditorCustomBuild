@@ -27,8 +27,8 @@ export default class AloeMagic extends Plugin {
 				},
 				text: {
 					display: true,
-					color: true,
-					background: true
+					color: true
+					// background: true
 				}
 			};
 		}
@@ -40,7 +40,7 @@ export default class AloeMagic extends Plugin {
 			allowContentOf: '$block',
 			allowAttributes: [ 'class', 'data-json', 'contenteditable', 'id', 'data-filters' ],
 			isBlock: true,
-			isObject: true,
+			isObject: true
 		} );
 
 		editor.conversion.for( 'upcast' ).elementToElement( { model: 'aloe-magic', view: 'aloe-magic' } );
@@ -77,8 +77,8 @@ export default class AloeMagic extends Plugin {
 				{ filter: 'line', action: 'consonant', name: '| Consonnes' },
 				{ filter: 'line', action: 'vowel', name: '| Voyelles' },
 				{ filter: 'text', action: 'display', name: 'TEXTES' },
-				{ filter: 'text', action: 'color', name: '| Couleurs' },
-				{ filter: 'text', action: 'background', name: '| Formes' },
+				{ filter: 'text', action: 'color', name: '| Couleurs' }
+				// { filter: 'text', action: 'background', name: '| Formes' },
 			];
 			source.forEach( item => {
 				const button = new SwitchButtonView();
