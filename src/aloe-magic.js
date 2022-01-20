@@ -131,7 +131,7 @@ export default class AloeMagic extends Plugin {
 						const data = JSON.stringify( response.data );
 						const dataFilters = JSON.stringify( filters );
 						// eslint-disable-next-line no-undef,max-len
-						const content = '<aloe-magic id="' + uuidv4() + '" contenteditable="false" data-json="' + window.btoa( unescape( encodeURIComponent( data ) ) ) + '" data-filters="' + window.btoa( unescape( encodeURIComponent( dataFilters ) ) ) + '">' + text + '</aloe-magic>';
+						const content = '<aloe-magic id="' + uuidv4() + '" contenteditable="false" data-json="' + window.btoa( unescape( encodeURIComponent( data ) ) ) + '" data-filters="' + window.btoa( unescape( encodeURIComponent( dataFilters ) ) ) + '">' + 'Texte : ' + text + '<br>[Test]' + '</aloe-magic>';
 						const viewFragment = editor.data.processor.toView( content );
 						const modelFragment = editor.data.toModel( viewFragment );
 
